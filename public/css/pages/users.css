@@ -1,14 +1,13 @@
-/* section .container-fluid .profile-header {
-    background-image: url(../../imgs/assets/profile_header.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-} */
-.profile-card {
-    position: relative;
-    z-index: 1;
-    top: -2.5rem;
+.profile-icon img {
+    width: 10rem;
+    border-radius: 50px;
 }
-.avatar-img {
-    width: 120px;
+.thead,
+.thead h4 {
+    background-color: #ad60e6;
+    color: white;
+}
+.user-info p {
+    font-family: "Roboto Flex", cursive;
+    font-weight: 600 !important;
 }

@@ -28,12 +28,8 @@ class User extends Authenticatable
         'institution',
         'address',
         'level_of_experience',
-        'category',
         'interests',
-        'skills',
-        'is_mentee',
         'mentee_message',
-        'mentee_bio',
     ];
 
     /**
@@ -70,7 +66,7 @@ class User extends Authenticatable
             'institution' => $request->institution,
             'address' => $request->address,
             'level_of_experience' => $request->level_of_experience,
-            'interests' => json_encode($request->interests),
+            'interests' => implode(" ", $request->interests),
             'mentee_message' => $request->mentee_message
         ]);
     }

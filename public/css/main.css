@@ -4,7 +4,7 @@
 } */
 @import url(./custom_styles/text-animations.css);
 @import url(./pages/find-mentor.css);
-@import url(./pages/mentee-home.css);
+@import url(./pages/users.css);
 body {
     font-family: "Righteous", cursive;
     background-color: #f2f3f3;

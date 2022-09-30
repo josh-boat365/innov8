@@ -13,13 +13,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                @guest
+                @if (!Auth::user())
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
                     <li class="nav-item">
 
                     </li>
@@ -27,15 +27,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">View Users</a>
                     </li>
-                @endguest
+                @endif
 
-                @guest
+                @if (!Auth::user())
                     <div class="d-flex auth-nav-btn">
-                        @guest
-                            <a class="nav-link" href="{{ route('login') }}">Sign In</a>
-                            <a class="nav-link sign-up-btn" href="{{ route('register') }}" style="text-align: center">Sign
-                                Up</a>
-                        @endguest
+
+                        <a class="nav-link" href="{{ route('login') }}">Sign In</a>
+                        <a class="nav-link sign-up-btn" href="{{ route('register') }}" style="text-align: center">Sign
+                            Up</a>
+
 
                     </div>
                 @else
@@ -51,8 +51,7 @@
                             </ul>
                         </li>
                     </div>
-
-                @endguest
+                @endif
             </ul>
         </div>
     </div>

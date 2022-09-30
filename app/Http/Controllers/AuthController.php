@@ -56,11 +56,14 @@ class AuthController extends Controller
 
         //     return redirect()->route('login')->withErrors('You must be logged in to have access to the page');
         // } else {
-        //     return view('layouts.mentee_home');
+        //     return view('users');
         // }
-        $users = User::where('email', Auth::user()->email)->first();
+        $users = User::all();
         $users->makeHidden(['password', 'category', 'mentor_bio', 'skills', 'remember_token']);
         // return $users;
+        if ($users->count() == 0) {
+            return "<h1>------There are no Registered Users------</h1>";
+        }
         return view('users', compact(['users']));
     }
 

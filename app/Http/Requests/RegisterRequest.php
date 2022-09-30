@@ -33,7 +33,7 @@ class RegisterRequest extends FormRequest
             'institution' => 'required| string',
             'address' => 'required',
             'level_of_experience' => 'string',
-            'interests' => 'array',
+            'interests' => 'required',
             'mentee_message' => ' string',
         ];
     }
