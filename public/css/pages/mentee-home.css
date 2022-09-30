@@ -1,0 +1,14 @@
+/* section .container-fluid .profile-header {
+    background-image: url(../../imgs/assets/profile_header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+.profile-card {
+    position: relative;
+    z-index: 1;
+    top: -2.5rem;
+}
+.avatar-img {
+    width: 120px;
+}
