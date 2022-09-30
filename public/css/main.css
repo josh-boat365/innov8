@@ -1,0 +1,400 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+@import url(./custom_styles/text-animations.css);
+@import url(./pages/find-mentor.css);
+@import url(./pages/mentee-home.css);
+body {
+    font-family: "Righteous", cursive;
+    background-color: #f2f3f3;
+}
+.hero-bg-warm {
+    background-image: linear-gradient(#ffffff 100%, #ffffff 100%);
+}
+.default-bg {
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+.border-red {
+    border: red solid 2px;
+}
+.main-width {
+    width: 90%;
+    margin: 0 auto !important;
+}
+a {
+    text-decoration: none !important;
+}
+li {
+    list-style: none;
+}
+a:hover {
+    transition: 0.5s ease-in-out;
+    color: #313686 !important;
+}
+.nav-link:hover {
+    transition: 0.5s ease-in-out;
+    color: rgba(255, 63, 85, 1) !important;
+}
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+section,
+nav {
+    /* color: rgba(107, 6, 97) !important; */
+    color: #313686;
+}
+
+/* hero section */
+.nav-link,
+.dropdown-item {
+    font-family: "Roboto Flex", sans-serif;
+    color: #313686 !important;
+    font-weight: 600 !important;
+}
+.dropdown-menu {
+    border: none;
+    border-radius: 2px;
+}
+.navbar-nav,
+.mr-auto {
+    flex: 1;
+    margin: auto !important;
+    display: flex;
+    justify-content: space-evenly;
+}
+.navbar-nav .auth-nav-btn {
+    width: 12rem;
+    justify-content: space-between;
+}
+
+.special-btn {
+    background: radial-gradient(
+                99.77% 100% at 31.97% 99.5%,
+                rgba(255, 63, 85, 1) 0%,
+                rgba(189, 138, 184, 0.3) 95.31%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        #ad60e6;
+    box-shadow: inset 0px -2.29762px 0px #313686;
+    border-radius: 2.79354px;
+    width: auto;
+    padding: 0.6rem;
+    color: white !important;
+}
+/* .special-btn:hover{
+    color: solid rgb(230, 167, 96);
+} */
+
+.navbar-nav .auth-nav-btn .sign-up-btn,
+.navbar-nav .auth-nav-btn .dropdown .btn {
+    background: radial-gradient(
+                99.77% 100% at 31.97% 99.5%,
+                rgba(255, 63, 85, 1) 0%,
+                rgba(189, 138, 184, 0.3) 95.31%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        #ad60e6;
+    box-shadow: inset 0px -2.29762px 0px #313686;
+    border-radius: 2.79354px;
+    width: 6rem;
+    color: white !important;
+}
+.navbar-toggler {
+    border: none;
+}
+/* .navbar-toggler-icon{
+    background-image: url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>');
+    color: white !important;
+} */
+.hero {
+    /* position: relative;
+  height: 300px;
+  overflow: hidden; */
+    /* height: 101vh; */
+    background-image: url("https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bbnt75feh1951n1a8dwg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box-shadow1 {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+.box-shadow2 {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.card {
+    border: none !important;
+}
+.hero-welcome-message {
+    margin-top: 6rem;
+    gap: 7rem;
+}
+.hero-welcome-message .welcome-message {
+    width: 31rem;
+}
+.text-gradient {
+    background: -webkit-linear-gradient(
+        rgb(173, 96, 230),
+        rgba(255, 63, 85, 1)
+    ) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 800;
+    font-family: "Righteous", sans-serif !important;
+}
+.text-gradient2 {
+    background: -webkit-linear-gradient(
+        rgb(96, 230, 114),
+        rgb(255, 220, 63)
+    ) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 800;
+    font-family: "Righteous", sans-serif !important;
+}
+.text-gradient3 {
+    background: -webkit-linear-gradient(
+        rgb(230, 167, 96),
+        rgb(82, 63, 255)
+    ) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 800;
+    font-family: "Righteous", sans-serif !important;
+}
+.text-gradient4 {
+    background: -webkit-linear-gradient(
+        rgb(243, 212, 72),
+        rgb(255, 133, 63)
+    ) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 800;
+    font-family: "Righteous", sans-serif !important;
+}
+.hero-welcome-message .welcome-message .Iam .b {
+    background: linear-gradient(
+        152.97deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    backdrop-filter: blur(42px);
+    border-radius: 0.4rem;
+}
+.hero-welcome-message .welcome-message .Iam p {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 2.4rem;
+}
+.hero-welcome-message .welcome-message .welcome-text {
+    font-size: 4.5rem;
+    width: 30rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+}
+.hero-welcome-message .welcome-message .welcome-info {
+    font-size: 1.2rem;
+    text-transform: none;
+    color: #313686 !important;
+    font-weight: 600;
+    font-family: "Roboto Flex", sans-serif;
+}
+.welcome-message .hero-tags span {
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 0.95rem;
+    font-weight: normal !important;
+    text-transform: capitalize;
+}
+.welcome-message .hero-tags span img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.welcome-message .hero-btn {
+    background: radial-gradient(
+                99.77% 100% at 31.97% 99.5%,
+                rgba(255, 63, 85, 1) 0%,
+                rgba(189, 138, 184, 0.3) 95.31%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        #ad60e6;
+    box-shadow: inset 5px -5.29762px 0px #313686;
+    border-radius: 7.79354px;
+    width: 10rem;
+    padding: 1rem;
+    color: white !important;
+}
+.welcome-image img {
+    position: relative;
+    bottom: 3.5rem;
+    width: 31rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+.mt5 {
+    margin-top: 5rem;
+    padding: 1rem;
+}
+.card1 {
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+    text-align: left;
+    /* font-family: 'Roboto Flex', sans-serif; */
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    border-radius: 6px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px,
+        rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+}
+.card1 i {
+    font-size: 2rem;
+    margin: auto 0;
+}
+.mentoring-flow .h5 {
+    font-family: "Roboto Flex", sans-serif;
+}
+
+.card2 {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.2rem auto;
+    text-align: center;
+    background-color: #f2f3f3;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+.card2 .card-icon {
+    width: 1rem;
+    height: 1rem;
+    padding: 2rem;
+    border: red solid;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.card2 .card-icon i {
+    margin: 0 auto;
+}
+.card2 .card-title {
+    text-transform: uppercase;
+}
+.mentors-section img {
+    width: 84.3rem;
+    height: 80vh;
+}
+.mentors-section .mentors-sec-text {
+    position: relative;
+    top: -14rem;
+    text-align: center;
+}
+.mentors-section .mentors-sec-text h5:first-of-type {
+    text-transform: uppercase;
+    color: white !important;
+    font-size: 2.2rem;
+}
+.mentors-section .mentors-sec-text h5:last-of-type {
+    text-transform: capitalize;
+    color: white !important;
+    font-size: 2rem;
+    font-family: "Roboto Flex", sans-serif;
+}
+.mentors-section .mentors-sec-text p {
+    color: white !important;
+    font-family: "Roboto Flex", sans-serif;
+}
+.mentors-section .card-container {
+    /* display: flex; */
+    position: relative;
+    top: -13rem;
+    width: 32rem;
+    text-align: center;
+    margin: 0 auto;
+}
+.mentors-section .card-container .card {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    border: none;
+    padding: 1rem;
+}
+.mentors-section .card-container .card .img-bg {
+    margin: 0 auto;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    background: -webkit-linear-gradient(
+        rgb(173, 96, 230),
+        rgba(255, 63, 85, 1)
+    ) !important;
+}
+.mentors-section .card-container .card .img-bg .img-icon {
+    width: fit-content;
+    background-color: white;
+    position: relative;
+    bottom: 2rem;
+    border-radius: 50%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+.mentors-section .card-container .card .img-bg .img-icon i {
+    font-size: 1.5rem;
+}
+.mentors-section .card-container .card .card-img-top {
+    width: 11rem;
+    height: 11rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+.mentors-section .card-container .card-body {
+    margin-top: 1.5rem;
+}
+
+.mentors-section .card-container .card-body h5:nth-of-type(2),
+.mentors-section .card-container .card-body h5:nth-of-type(3) {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Roboto Flex";
+}
+.mentors-section .card-container .card-body #prevBtn,
+.mentors-section .card-container .card-body #nextBtn {
+    border: none;
+    outline: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    border-radius: 50%;
+    background: -webkit-linear-gradient(
+        rgb(243, 212, 72),
+        rgb(255, 133, 63)
+    ) !important;
+}
+.mentors-section .card-container .card-body #prevBtn i,
+.mentors-section .card-container .card-body #nextBtn i {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(116, 9, 121, 1) 51%,
+        rgba(141, 0, 255, 1) 100%
+    );
+}
+
+.footer h4,
+.footer p,
+.footer a {
+    color: white !important;
+}
