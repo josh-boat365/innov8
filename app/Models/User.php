@@ -3,10 +3,11 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -18,9 +19,17 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
+        'contact',
+        'gender',
         'password',
+        'institution',
+        'address',
+        'level_of_experience',
+        'interests',
+        'mentee_message',
     ];
 
     /**
@@ -41,4 +50,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function createUser($request)
+    {
+
+        // dd($request);
+
+        User::create([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' =>  $request->email,
+            'contact' => $request->contact,
+            'gender' => $request->gender,
+            'password' => Hash::make($request->password),
+            'institution' => $request->institution,
+            'address' => $request->address,
+            'level_of_experience' => $request->level_of_experience,
+            'interests' => implode(" ", $request->interests),
+            'mentee_message' => $request->mentee_message
+        ]);
+    }
 }
