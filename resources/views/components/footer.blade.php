@@ -11,7 +11,7 @@
     }
 </style>
 <footer style="margin-top: 35px">
-    <div class="d-flex justify-content-center" style="gap: 1rem">
+    <div class="d-flex justify-content-center" style="gap: 0.5rem; flex-wrap:wrap">
         <div class="copy">
             &copy; Copyright All Rights Reserved -
             <script>
