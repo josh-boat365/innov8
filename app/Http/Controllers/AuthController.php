@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\AuthenticationRequest;
+use Illuminate\Contracts\Session\Session;
+use App\Http\Controllers\FlashMessagesController;
 
 class AuthController extends Controller
 {
@@ -32,7 +34,9 @@ class AuthController extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             if (Auth::user()) {
-                return redirect()->route('users');
+                return redirect()->route('users')->with(
+                    session()->flash('success', 'Login Successfully')
+                );
             }
         } else {
             return redirect()->back()->withErrors('Invalid Username or Password');
@@ -59,7 +63,7 @@ class AuthController extends Controller
         //     return view('users');
         // }
         $users = User::all();
-        $users->makeHidden(['password', 'category', 'mentor_bio', 'skills', 'remember_token']);
+        $users->makeHidden(['password', 'created_at', 'updated_at', 'email_verified_at', 'remember_token']);
         // return $users;
         if ($users->count() == 0) {
             return "<h1>------There are no Registered Users------</h1>";
