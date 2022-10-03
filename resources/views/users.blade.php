@@ -51,7 +51,7 @@
                                                                 {{ $user->contact }}
                                                             </p>
                                                             <p><span class="bold">Address: </span>
-                                                                {{ $user->address }} | <span class="bold">School:
+                                                                {{ $user->address }} | <span class="bold">Institution:
                                                                 </span>
                                                                 {{ $user->institution }}</p>
                                                             <p><span class="bold">Mentee Message: </span>
