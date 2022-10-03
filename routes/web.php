@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FlashMessagesController;
 
 
 /*
@@ -25,6 +26,8 @@ Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/auth-register', [AuthController::class, 'postRegister'])->name('auth.register');
 
 Route::get('/users', [AuthController::class, 'users'])->name('users');
+Route::get('/users/flash-messages', [FlashMessagesController::class, 'showMessages'])->name('flash-messages');
+
 
 
 Route::get('/logout', [AuthController::class, 'auth_Logout'])->name('logout');

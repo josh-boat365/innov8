@@ -4,12 +4,14 @@
             font-family: "Righteous", cursive;
         }
     </style>
+    <x-flash-messages />
     <section class="pt-0">
         <div class="container-fluid px-0">
             <div class="card h-100px h-md-200px rounded-0 profile-header">
                 <img src="{{ asset('imgs/assets/profile_header.png') }}" alt="">
             </div>
         </div>
+        <x-flash-messages />
         <div class="container">
             <div class="row">
                 <div class="col-12">
