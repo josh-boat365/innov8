@@ -59,7 +59,7 @@ class AuthController extends Controller
         //     return view('users');
         // }
         $users = User::all();
-        $users->makeHidden(['password', 'category', 'mentor_bio', 'skills', 'remember_token']);
+        $users->makeHidden(['password', 'created_at', 'updated_at', 'email_verified_at', 'remember_token']);
         // return $users;
         if ($users->count() == 0) {
             return "<h1>------There are no Registered Users------</h1>";
